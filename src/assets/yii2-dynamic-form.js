@@ -249,9 +249,15 @@
 
           widgetsOptions = widgetsOptions.reverse();
           for (var i = identifiers.length - 1; i >= 1; i--) {
-            identifiers[i] = $elem
+            /* identifiers[i] = $elem
               .closest(widgetsOptions[i].widgetItem)
-              .index();
+              .index(); */
+
+            if (typeof widgetsOptions[i] !== "undefined") {
+              identifiers[i] = $elem
+                .closest(widgetsOptions[i].widgetItem)
+                .index();
+            }
           }
         }
 
@@ -301,9 +307,15 @@
 
           widgetsOptions = widgetsOptions.reverse();
           for (var i = identifiers.length - 1; i >= 1; i--) {
-            identifiers[i] = $elem
+            /* identifiers[i] = $elem
               .closest(widgetsOptions[i].widgetItem)
-              .index();
+              .index(); */
+
+            if (typeof widgetsOptions[i] !== "undefined") {
+              identifiers[i] = $elem
+                .closest(widgetsOptions[i].widgetItem)
+                .index();
+            }
           }
         }
 
